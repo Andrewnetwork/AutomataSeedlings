@@ -107,7 +107,7 @@ def test3():
     print("===========================")
 
 
-    t = [0]
+    t = [0,1]
 
     t[0] = \
     np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
@@ -118,6 +118,16 @@ def test3():
                0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;\
                0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0;\
                0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0')
+
+    t[1] = \
+    np.matrix('0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0;\
+               0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
     v = [0,1,2,3,4,5]
 
@@ -181,6 +191,9 @@ def test3():
 
 
 
+    print("FCAL of Tests")
+    for idx, test in enumerate(t):
+        print("Test: ", idx, FCAL(ACN(test)))
 
     print("FCAL of Variations")
     for idx, variation in enumerate(v):
@@ -189,11 +202,12 @@ def test3():
     simResults    =  np.zeros((len(v),len(v)))
     simResultsRev =  np.zeros((len(v),len(v)))
     for idx1, variation1 in enumerate(v):
-        r = SFCAL_N(FCAL(ACN(variation1)), FCAL(ACN(t[0])))
-        print("->SIM of:         ", idx1, "and", "test",r)
+        for idxTest, tst in enumerate(t):
+            r = SFCAL_N(FCAL(ACN(variation1)), FCAL(ACN(t[idxTest])))
+            print("->SIM of:         ", idx1, "and", "test",idxTest,r)
 
-        b = SFCAL_N(list(reversed(FCAL(ACN(variation1)))), FCAL(ACN(t[0])))
-        print("->REVERSE SIM of: ", idx1, "and", "test", b)
+            b = SFCAL_N(list(reversed(FCAL(ACN(variation1)))), FCAL(ACN(t[idxTest])))
+            print("->REVERSE SIM of: ", idx1, "and", "test",idxTest, b)
 
 
         for idx2, variation2 in enumerate(v):
@@ -210,7 +224,205 @@ def test3():
     print (simResultsRev)
 
 
+def test4():
+    print("========= Test 4 =========")
+
+    v = [0,1]
+
+    v[0] = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0;\
+               0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    v[1] = \
+        np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    vFCAL = FCAL(ACN(v[0]))
+
+    predictionThreshold = 0.7
+
+    print("Running...")
+    # 13 bits.
+    while(True):
+        rand = generateRandomConnectedBinaryMatrix(v[0].shape, 13)
+        rFCAL = FCAL( ACN(rand) )
+
+        normal = SFCAL_LCS(vFCAL,rFCAL)
+        rev    = SFCAL_LCS(list(reversed(vFCAL)),rFCAL)
+
+        if( rev > predictionThreshold or normal > predictionThreshold ):
+            print("Reference:      ", vFCAL,normal)
+            print("Generation:     ", rFCAL)
+            print("Generation Rev: ", list(reversed(vFCAL)),rev)
+
+            print(rand)
+            drawBinMatrix(rand)
+
+            l = raw_input("WAIT")
+            print("Running...")
+
+# TODO: Finding the perfect similarity matrix.
+
+def test5():
+    a = [2, 3, 1, 6]
+    b = [4, 2 ,3, 5]
+
+    print( lcs(a,b) )
+    print( SFCAL_LCS(a,b) )
 
 
 
-test3()
+def test6():
+    tst = \
+        np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    imgplot = plt.imshow(tst,interpolation="nearest", cmap="hot")
+    plt.axis("off")
+    plt.show()
+
+
+def test7():
+    v = [0, 1, 2, 3, 4, 5]
+
+    v[0] = \
+        np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+    v[1] = \
+        np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 1 0 0 1 1 1 1 0;\
+                   0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0;\
+                   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    v[2] = \
+            np.matrix('0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    v[3] = \
+            np.matrix('0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+                       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+    v[4] = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0')
+
+    v[5] = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0')
+
+
+    pathSizesCollect = []
+
+    for mat in v:
+        acn = ACN_D(MIT(mat))
+
+        paths = []
+
+        for nodeID in range(2,len(acn)+1):
+            tmp = list( dfs_paths( acn,str(1),str(nodeID) ) )
+            paths.append(tmp)
+
+        pathSizes = []
+
+        for p in paths:
+           pathSizes.append( len(p) )
+
+        print(pathSizes)
+        pathSizesCollect.append(pathSizes)
+
+    compMatrix = np.zeros( (6,6) )
+    for idx1,elm1 in enumerate(pathSizesCollect):
+        for idx2,elm2 in enumerate(pathSizesCollect):
+            compMatrix[idx1,idx2] = SFCAL_LCS(elm1,elm2)
+            print(idx1,idx2,"---:",compMatrix[idx1,idx2] )
+
+    print(compMatrix)
+
+def test8():
+
+    v = [0, 1]
+
+    v[0] = \
+           np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                      0 1 1 1 1 0 0 1 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
+                      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    vdf = DFS_PF( v[0] )
+
+    predictionThreshold = 0.7
+
+    print("Running...")
+    # 13 bits.
+    while (True):
+        rand = generateRandomConnectedBinaryMatrix(v[0].shape, 13)
+        rdf = DFS_PF( rand )
+
+        normal = SFCAL_N(vdf, rdf)
+        rev = SFCAL_N(list(reversed(vdf)), rdf)
+
+        if (rev > predictionThreshold or normal > predictionThreshold):
+            print("Reference:      ", vdf, normal)
+            print("Generation:     ", rdf)
+            print("Generation Rev: ", list(reversed(vdf)), rev)
+
+            print(rand)
+            saveBinMatrixIMG(rand,"OutImages/HookTest1/",str(datetime.datetime.now()))
+            print("Running...")
+
+test8()
