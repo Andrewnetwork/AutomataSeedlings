@@ -106,6 +106,19 @@ def test3():
     print("     The HOOK analysis    ")
     print("===========================")
 
+
+    t = [0]
+
+    t[0] = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0')
+
     v = [0,1,2,3,4,5]
 
     v[0] = \
@@ -167,9 +180,35 @@ def test3():
                0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0')
 
 
+
+
     print("FCAL of Variations")
     for idx, variation in enumerate(v):
-        print("Variation: ",idx+1,FCAL(ACN(variation)) )
+        print("Variation: ",idx,FCAL(ACN(variation)) )
+
+    simResults    =  np.zeros((len(v),len(v)))
+    simResultsRev =  np.zeros((len(v),len(v)))
+    for idx1, variation1 in enumerate(v):
+        r = SFCAL_N(FCAL(ACN(variation1)), FCAL(ACN(t[0])))
+        print("->SIM of:         ", idx1, "and", "test",r)
+
+        b = SFCAL_N(list(reversed(FCAL(ACN(variation1)))), FCAL(ACN(t[0])))
+        print("->REVERSE SIM of: ", idx1, "and", "test", b)
+
+
+        for idx2, variation2 in enumerate(v):
+            r = SFCAL_N( FCAL(ACN(variation1)), FCAL(ACN(variation2) ) )
+            simResults[idx1,idx2] = r
+            print("SIM of:         ",idx1,"and",idx2, r )
+
+            b = SFCAL_N( list(reversed( FCAL(ACN(variation1)) )), FCAL(ACN(variation2) ) )
+            simResultsRev[idx1,idx2] = b
+            print("REVERSE SIM of: ", idx1, "and", idx2, b)
+
+    print(simResults)
+    print("----------------")
+    print (simResultsRev)
+
 
 
 
