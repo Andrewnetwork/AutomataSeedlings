@@ -403,6 +403,7 @@ def test8():
                       0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
                       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
+
     vdf = DFS_PF( v[0] )
 
     predictionThreshold = 0.7
@@ -425,4 +426,5 @@ def test8():
             saveBinMatrixIMG(rand,"OutImages/HookTest1/",str(datetime.datetime.now()))
             print("Running...")
 
-test8()
+#test8()
+test7()

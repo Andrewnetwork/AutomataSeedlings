@@ -14,7 +14,7 @@ for visual pattern recognition are convolutional neural nets. The problem with c
 neural networks to begin with, is that they require massive amounts of labeled data to train on and resources to do so.
 I believe there is a better way to approach pattern recognition, a way I'm not sure of the interplay between this method
 and traditional methods. Perhaps the view of automata seedlings can be used in conjuction with classical methods in order
-to provide a new frounter of machine learning.
+to provide a new frontier of machine learning.
 </p>
 
 <h3>The Importance of One-Shot Learning</h3>
