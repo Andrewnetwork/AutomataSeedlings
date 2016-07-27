@@ -12,7 +12,7 @@
 
 
 from GraphFN import *
-from MatrixSim import *
+from matrixDiff import *
 
 A_unnamed = np.matrix('0 1 0 0;\
                1 1 1 1;\
@@ -643,13 +643,11 @@ def test11():
     while (True):
         rand = generateRandomConnectedBinaryMatrix(v[0].shape, 13)
 
-        simil = matrixSim(v[0],rand)
+        simil = matrixDiff(v[0],rand)
 
-        if max(simil) <= predictionThreshold:
-            print("Reference:      ", v[0])
-            print("Generation:     ", np.matrix(rand))
-
-            results_dir = "OutImages/HookTestUltra/pd_"+str(predictionThreshold)+"/"
+        if max([abs(x) for x in simil]) <= predictionThreshold and simil[0] == simil[1]:
+            print("Similarity: ",simil)
+            results_dir = "OutImages/HookTestUltra/similEq_pd_"+str(predictionThreshold)+"/"
             if not os.path.isdir(results_dir):
                 os.makedirs(results_dir)
 
@@ -657,8 +655,20 @@ def test11():
 
             print("Running...")
 
-    print( matrixSim(v[0],counter[0]) )
+
+def test12():
+    test = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;\
+               0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+    print(matrixDiff(v[0], test))
 
 
 
-test11()
+test12()

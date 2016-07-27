@@ -1,6 +1,6 @@
 from GraphFN import *
 
-def matrixSim(m1, m2):
+def matrixDiff(m1, m2):
     m1Sig = matrixSignature(m1)
     m2Sig = matrixSignature(m2)
 
