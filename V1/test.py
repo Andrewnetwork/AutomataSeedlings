@@ -12,6 +12,7 @@
 
 
 from GraphFN import *
+from MatrixSim import *
 
 A_unnamed = np.matrix('0 1 0 0;\
                1 1 1 1;\
@@ -99,13 +100,14 @@ counter[0] = \
                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
 counter[1] = \
-    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
-               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
-               0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0;\
-               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
-               0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0;\
-               0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
-               0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;')
+       np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
+                  0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0')
 
 def B():
     print(B_named )
@@ -606,6 +608,7 @@ def test9():
 def test10():
     lst = v
     lst.append(counter[0])
+    lst.append(counter[1])
 
     for variant in lst:
         graph = ACN_D(MIT(variant))
@@ -632,7 +635,9 @@ def test10():
 
         print(lenOfPaths)
 
+def test11():
+    print( matrixSim(v[0],v[2]) )
 
 
 
-test10()
+test11()
