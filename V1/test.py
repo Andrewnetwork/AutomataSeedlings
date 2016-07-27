@@ -108,6 +108,16 @@ counter[1] = \
                   0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
                   0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0;\
                   0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0')
+counter[2] = \
+np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
 
 def B():
     print(B_named )
@@ -636,18 +646,29 @@ def test10():
         print(lenOfPaths)
 
 def test11():
+
+    ref = \
+    np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0;\
+               0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
     predictionThreshold = 8
 
     print("Running...")
     # 13 bits.
     while (True):
-        rand = generateRandomConnectedBinaryMatrix(v[0].shape, 13)
+        rand = generateRandomConnectedBinaryMatrix(ref.shape, ref.sum())
 
-        simil = matrixDiff(v[0],rand)
+        simil = matrixDiff(ref,rand)
 
         if max([abs(x) for x in simil]) <= predictionThreshold and simil[0] == simil[1]:
             print("Similarity: ",simil)
-            results_dir = "OutImages/HookTestUltra/similEq_pd_"+str(predictionThreshold)+"/"
+            results_dir = "OutImages/exp1/pd_"+str(predictionThreshold)+"/"
             if not os.path.isdir(results_dir):
                 os.makedirs(results_dir)
 
@@ -672,11 +693,11 @@ def test12():
     test[1] = \
     np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+               0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0;\
+               0 0 0 0 0 0 1 1 0 0 1 1 0 0 0 0;\
+               0 0 0 0 0 0 1 1 0 0 1 1 0 0 0 0;\
+               0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0;\
                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
-               0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0;\
-               0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0;\
-               0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0;\
-               0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0;\
                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
 

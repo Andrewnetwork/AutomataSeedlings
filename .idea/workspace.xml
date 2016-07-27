@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74340c9-eac3-477e-be96-0fd445fce6aa" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BitDraw/tmpOutput/tst.numpy" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BitDraw/BitDraw.py" afterPath="$PROJECT_DIR$/BitDraw/BitDraw.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V1/test.py" afterPath="$PROJECT_DIR$/V1/test.py" />
     </list>
     <ignored path="Research.iws" />
@@ -17,8 +19,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1469600911873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
-    <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw.coverage" NAME="Unittests in BitDraw Coverage Results" MODIFIED="1469609361761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1/BitDraw" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1469611384658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI.coverage" NAME="Unittests in ExploritoryUI Coverage Results" MODIFIED="1469616092625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw.coverage" NAME="Unittests in BitDraw Coverage Results" MODIFIED="1469609711141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BitDraw" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw__1_.coverage" NAME="Unittests in BitDraw (1) Coverage Results" MODIFIED="1469613433742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BitDraw" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,11 +43,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="2016-07-27 05:07:49.190851.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:49.190851.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="672" column="12" selection-start-line="672" selection-start-column="12" selection-end-line="679" selection-end-column="48" />
+            <state relative-caret-position="261">
+              <caret line="705" column="35" selection-start-line="705" selection-start-column="14" selection-end-line="705" selection-end-column="35" />
               <folding>
                 <element signature="e#309#330#0" expanded="true" />
               </folding>
@@ -51,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BitDraw.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/V1/BitDraw/BitDraw.py">
+      <file leaf-file-name="ExploritoryUI.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/V1/ExploritoryUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="58" column="65" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+            <state relative-caret-position="120">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="41" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -66,9 +77,21 @@
       <file leaf-file-name="matrixDiff.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V1/matrixDiff.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+            <state relative-caret-position="-264">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitDraw.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BitDraw/BitDraw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-294">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +120,11 @@
         <option value="$PROJECT_DIR$/V1/MatrixSim.py" />
         <option value="$PROJECT_DIR$/V1/GraphFN.py" />
         <option value="$PROJECT_DIR$/V1/MatrixDiff.py" />
-        <option value="$PROJECT_DIR$/V1/test.py" />
         <option value="$PROJECT_DIR$/V1/BitDraw/BitDraw.py" />
+        <option value="$PROJECT_DIR$/V1/matrixDiff.py" />
+        <option value="$PROJECT_DIR$/V1/test.py" />
+        <option value="$PROJECT_DIR$/BitDraw/BitDraw.py" />
+        <option value="$PROJECT_DIR$/V1/ExploritoryUI.py" />
       </list>
     </option>
   </component>
@@ -108,6 +134,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
@@ -180,33 +207,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="V1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="BitDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomataSeedlings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomataSeedlings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="V1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BitDraw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmpOutput" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -223,7 +224,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in BitDraw">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in ExploritoryUI">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -247,13 +253,59 @@
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/V1/BitDraw" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BitDraw" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Research" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/V1/BitDraw/BitDraw.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in BitDraw (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BitDraw" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Research" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BitDraw/BitDraw.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in ExploritoryUI" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/V1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Research" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/V1/ExploritoryUI.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -473,14 +525,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw" />
       </list>
     </recent_temporary>
   </component>
@@ -501,35 +557,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 39m 55s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 26m 25s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 41m 03s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 26m 35s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 41m 43s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 26m 43s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 42m 07s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 27m 11s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 42m 39s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 31m 06s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 43m 06s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 31m 43s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 43m 43s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 32m 19s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 44m 26s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 38m 56s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 46m 09s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 41m 13s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_BitDraw - 2016.07.27 at 04h 46m 23s.xml">
-      <configuration name="Unittests in BitDraw" configurationId="tests" />
+    <history-entry file="Unittests_in_ExploritoryUI - 2016.07.27 at 06h 41m 42s.xml">
+      <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -542,19 +598,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="-1" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17453505" sideWeight="0.49239543" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822478" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43790013" sideWeight="0.5143061" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43790013" sideWeight="0.5171674" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822478" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.49284694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43790013" sideWeight="0.48569384" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43790013" sideWeight="0.4828326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17453505" sideWeight="0.50760454" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -625,6 +681,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,6 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,13 +794,117 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/test.py">
+    <entry file="file://$PROJECT_DIR$/BitDraw/tmpOutput/tst.numpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="672" column="12" selection-start-line="672" selection-start-column="12" selection-end-line="679" selection-end-column="48" />
-          <folding>
-            <element signature="e#309#330#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#/Users/andrewribeiro/Documents/AI/AutomataSeedlings/V1/NodeTree.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#/Users/andrewribeiro/Documents/AI/AutomataSeedlings/V1/NodeTree.py</OriginalElement>
+          <nodes>
+            <node x="" y="">V1.NodeTree.Node</node>
+            <node x="" y="">V1.NodeTree.Tree</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="75.5" y="52.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#/Users/andrewribeiro/Documents/AI/AutomataSeedlings/BitDraw/BitDraw.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#/Users/andrewribeiro/Documents/AI/AutomataSeedlings/BitDraw/BitDraw.py</OriginalElement>
+          <nodes>
+            <node x="" y="">BitDraw.BitDraw.TestApp</node>
+            <node x="" y="">kivy.app.App</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="95.0" y="75.0" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:50.380719.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:56.673135.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:58.143692.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:08:00.798996.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:53.531106.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:50.594492.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:50.110467.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:49.512073.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BitDraw/tmpOutput/tst2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BitDraw/tmpOutput/tst.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BitDraw/tmpOutput/f.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BitDraw/tmpOutput/.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -754,26 +916,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/V1/OutImages/exp1/pd_8/2016-07-27 05:07:49.190851.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V1/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="705" column="35" selection-start-line="705" selection-start-column="14" selection-end-line="705" selection-end-column="35" />
+          <folding>
+            <element signature="e#309#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BitDraw/BitDraw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/V1/matrixDiff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        <state relative-caret-position="-264">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V1/BitDraw/tmpOutput/tst.numpy">
+    <entry file="file://$PROJECT_DIR$/V1/ExploritoryUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/V1/BitDraw/BitDraw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="58" column="65" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+        <state relative-caret-position="120">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="41" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

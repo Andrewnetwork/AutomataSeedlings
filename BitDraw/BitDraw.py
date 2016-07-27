@@ -43,7 +43,7 @@ class TestApp(App):
 
     def saveImage(self, instance):
         rows = len(self.bttns) / self.cols
-        imageMatrix = np.zeros(shape=(rows,self.cols))
+        imageMatrix = np.zeros(shape=(rows,self.cols), dtype=np.int8)
         rowVal = []
 
         count = 0
@@ -56,7 +56,9 @@ class TestApp(App):
 
             count += 1
 
-        imageMatrix.tofile("tmpOutput/"+self.nameTXT.text+".numpy")
+        #imageMatrix.tofile("tmpOutput/"+self.nameTXT.text+".numpy", )
+        np.savetxt("tmpOutput/"+self.nameTXT.text+".txt",
+                   imageMatrix,fmt='%i',delimiter=",",footer="("+str(rows)+","+str(self.cols)+")")
 
     def build(self):
         #self.activePixels.bind(self.pixelValChange)
