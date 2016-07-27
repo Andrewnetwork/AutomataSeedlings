@@ -12,9 +12,7 @@ show you a series of hand written variants of that alphabet, chances are you'd b
 this test set with the reference alphabet -- perhaps misclassifying a few exotic variations. The current state-of-the-art
 for visual pattern recognition are convolutional neural nets. The problem with convolutional neural nets, and with
 neural networks to begin with, is that they require massive amounts of labeled data to train on and resources to do so.
-I believe there is a better way to approach pattern recognition, a way I'm not sure of the interplay between this method
-and traditional methods. Perhaps the view of automata seedlings can be used in conjuction with classical methods in order
-to provide a new frontier of machine learning.
+
 </p>
 
 <h3>The Importance of One-Shot Learning</h3>

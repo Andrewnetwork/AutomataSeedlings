@@ -76,6 +76,8 @@ class TestApp(App):
 
         self.activePixels = 0
 
+        self.currentActiveLBL.text = "NEED INPUT"
+
     def build(self):
         #self.activePixels.bind(self.pixelValChange)
 
@@ -83,9 +85,11 @@ class TestApp(App):
 
         topLayer = BoxLayout( orientation="horizontal", size_hint=(1, .1), padding=4)
 
-        self.currentActiveLBL = Label(text="0",size_hint=(0.2, 1))
+        self.currentActiveLBL = Label(text="== HELLO, I AM A GENERAL PATTERN RECOGNIZER ==",size_hint=(1, 1))
+        self.clearBttn = Button(text="Clear", size_hint=(0.5, 1), on_press=self.clearBttnFn)
 
         topLayer.add_widget(self.currentActiveLBL)
+        topLayer.add_widget(self.clearBttn )
 
         boxLayout.add_widget(topLayer)
 
