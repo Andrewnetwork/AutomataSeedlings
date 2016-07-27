@@ -1,10 +1,26 @@
+# GraphFN.py
+# Andrew Ribeiro
+# July 20, 2016
+#    _           _
+#   /_\  _ _  __| |_ _ _____ __ __
+#  / _ \| ' \/ _` | '_/ -_) V  V /
+# /_/ \_\_||_\__,_|_| \___|\_/\_/
+#
+# Note:
+# This software is provided to you on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied.
+
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
 from NodeTree import *
 import datetime
+import itertools
+
+
 
 # mapIdentityTopology( MIT )
+# Given a binary matrix, number every 1 uniquely.
 def MIT( matrix ):
 
     maxRows = matrix.shape[0]
@@ -23,13 +39,43 @@ def MIT( matrix ):
     return matrixOut
 
 
-def walkMatrix( matrix ,parentRow,parentCol, location):
-    t = matrix[location]
+def makePermLists(lenOfList):
+    return list(itertools.permutations(range(1,lenOfList+1)))
 
-    print( matrix[location] )
 
-    return t
+#all matrix identity combinations.
+#Combinatorically explosive.
+def AMI(matrix):
+    maxRows = matrix.shape[0]
+    maxCols = matrix.shape[1]
+    uniqueCounter = 0
 
+    #TODO: Find more elegant way.
+    for col in range(maxCols):
+        for row in range(maxRows):
+            if (matrix[row, col] > 0):
+                # matrixOut[row, col] = int(idCounter)
+                uniqueCounter += 1
+
+
+
+    allMatrixOut = []
+    perms = makePermLists( uniqueCounter )
+    uniqueCounter = 0
+
+    for perm in perms:
+        matrixOut = matrix.copy
+        for col in range(maxCols):
+            for row in range(maxRows):
+                if (matrix[row, col] > 0):
+                    matrixOut[row, col] = perm[uniqueCounter]
+                    uniqueCounter += 1
+        allMatrixOut.append(matrixOut)
+
+
+    return allMatrixOut
+
+#
 def adjacentNodes( matrix, location ):
 
     element = matrix[location]
@@ -302,6 +348,75 @@ def saveBinMatrixIMG( mat , path, name ):
 
 def traverse( acn, startIndex ):
     return acn[startIndex]
+
+def findNumbering(matrix):
+    outMatrix = matrix.copy()
+
+    maxRows = matrix.shape[0]
+    maxCols = matrix.shape[1]
+
+    for col in range(maxCols):
+        for row in range(maxRows):
+            if (matrix[row, col] > 0):
+                findNumRec(outMatrix, (row, col), 1)
+                return outMatrix
+
+
+def findNumRec(matrix,startLoc, idCounter=1):
+    matrix[startLoc] = -idCounter
+    element = matrix[startLoc]
+
+    row = startLoc[0]
+    col = startLoc[1]
+
+    maxRows = matrix.shape[0]
+    maxCols = matrix.shape[1]
+
+    t = set()
+    ## Find Adjacency ##
+
+    # Left
+    if (col - 1) >= 0 and (row - 1) >= 0 and matrix[row - 1, col - 1] > 0 :
+        # Left Top
+        idCounter += 1
+        idCounter += findNumRec(matrix,(row - 1, col - 1),idCounter)
+    if (col - 1) >= 0 and matrix[row, col - 1] > 0:
+        # Left Middle
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row, col - 1), idCounter)
+    if (col - 1) >= 0 and (row + 1) < maxRows and matrix[row + 1, col - 1] > 0:
+        # Left Bottom
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row + 1, col - 1), idCounter)
+
+    # Middle
+    if (row - 1) >= 0 and matrix[row - 1, col] > 0:
+        # Up
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row - 1, col), idCounter)
+    if (row + 1) < maxRows and matrix[row + 1, col] > 0:
+        # Down
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row + 1, col), idCounter)
+
+    # Right
+    if (col + 1) < maxCols and (row - 1) >= 0 and matrix[row - 1, col + 1] > 0:
+        # Right Top
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row - 1, col + 1), idCounter)
+    if (col + 1) < maxCols and matrix[row, col + 1] > 0:
+        # Right Middle
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row, col + 1), idCounter)
+    if (col + 1) < maxCols and (row + 1) < maxRows and matrix[row + 1, col + 1] > 0:
+        # Right Bottom
+        idCounter += 1
+        idCounter += findNumRec(matrix, (row + 1, col + 1), idCounter)
+
+    print(idCounter)
+
+    return idCounter
+
 
 
 def dfs(graph, start, visited=None):

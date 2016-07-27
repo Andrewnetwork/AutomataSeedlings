@@ -1,3 +1,16 @@
+# NodeTree.py
+# Andrew Ribeiro
+# July 20, 2016
+#    _           _
+#   /_\  _ _  __| |_ _ _____ __ __
+#  / _ \| ' \/ _` | '_/ -_) V  V /
+# /_/ \_\_||_\__,_|_| \___|\_/\_/
+#
+# Note:
+# This software is provided to you on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied.
+
+
 class Tree:
     identity = None
     children = []
