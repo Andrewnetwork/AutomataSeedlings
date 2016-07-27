@@ -92,15 +92,16 @@ def adjacentNodes( matrix, location ):
     ## Find Adjacency ##
 
     # Left
-    if (col-1) >= 0  and (row-1) >= 0 and matrix[row-1,col-1] > 0:
+
+    #if (col-1) >= 0  and (row-1) >= 0 and matrix[row-1,col-1] > 0:
         # Left Top
-        t.addChild( matrix[row-1,col-1] )
+        #t.addChild( matrix[row-1,col-1] )
     if (col-1) >= 0 and matrix[row,col-1] > 0:
         # Left Middle
         t.addChild( matrix[row,col-1] )
-    if (col-1) >= 0 and (row+1) < maxRows and matrix[row+1,col-1] > 0:
+    #if (col-1) >= 0 and (row+1) < maxRows and matrix[row+1,col-1] > 0:
         # Left Bottom
-        t.addChild( matrix[row+1,col-1] )
+        #t.addChild( matrix[row+1,col-1] )
 
     # Middle
     if (row-1) >=0 and matrix[row-1,col] > 0:
@@ -111,15 +112,15 @@ def adjacentNodes( matrix, location ):
         t.addChild( matrix[row+1,col] )
 
     # Right
-    if  (col+1) < maxCols  and (row-1) >= 0 and matrix[row-1,col+1] > 0:
+    #if  (col+1) < maxCols  and (row-1) >= 0 and matrix[row-1,col+1] > 0:
         # Right Top
-        t.addChild( matrix[row-1,col+1] )
+        #t.addChild( matrix[row-1,col+1] )
     if  (col+1) < maxCols and matrix[row,col+1] > 0:
         # Right Middle
         t.addChild( matrix[row,col+1] )
-    if (col+1) < maxCols and (row+1) < maxRows and matrix[row+1,col+1] > 0:
+    #if (col+1) < maxCols and (row+1) < maxRows and matrix[row+1,col+1] > 0:
         # Right Bottom
-        t.addChild( matrix[row+1,col+1] )
+        #t.addChild( matrix[row+1,col+1] )
 
     return t
 

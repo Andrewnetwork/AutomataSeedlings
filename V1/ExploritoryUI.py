@@ -6,6 +6,7 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.label import Label
 from kivy.config import Config
 from kivy.properties import NumericProperty
+from kivy.uix.scrollview import ScrollView
 
 import numpy as np
 from GraphFN import *
@@ -18,10 +19,16 @@ Config.set('graphics', 'height', '800')
 class TestApp(App):
     topBttns         = []
     bottomButtons    = []
+    savedImages      = []
+    savedImagesBttns = []
     activePixels     = NumericProperty(0)
     currentActiveLBL = None
     clearBttn        = None
-    cols             = 16
+    saveBttn         = None
+    saveLayout       = None
+    topImageBuffer   = None
+    cols             = 35
+
 
     def pressPixelButton(self,instance):
         if(instance.background_color == [1,1,1,1]  ):
@@ -34,6 +41,11 @@ class TestApp(App):
         try:
             matrixD = self.computeMatrixDiff()
             self.currentActiveLBL.text = "[ "+str(matrixD[0])+" | "+str(matrixD[1])+" ]"
+
+            # Compute matrix diff for saved images.
+            for idx,img in enumerate(self.savedImages):
+                matrixD = matrixDiff( self.topImageBuffer,img )
+                self.savedImagesBttns[idx].text =  "[ "+str(matrixD[0])+" | "+str(matrixD[1])+" ]"
         except:
             self.currentActiveLBL.text = "NEED INPUT"
 
@@ -65,6 +77,8 @@ class TestApp(App):
 
             count += 1
 
+        self.topImageBuffer = imageMatrixTop
+
         return matrixDiff(imageMatrixTop, imageMatrixBot)
 
     def clearBttnFn(self, instance):
@@ -78,25 +92,51 @@ class TestApp(App):
 
         self.currentActiveLBL.text = "NEED INPUT"
 
+    def saveImage(self, instance):
+        nb = Button(width=100)
+        self.savedImagesBttns.append(nb)
+        self.saveLayout.add_widget(nb)
+
+        rows = len(self.topBttns) / self.cols
+        imageMatrixBot = np.zeros(shape=(rows, self.cols), dtype=np.int8)
+
+        rowVal = []
+
+        count = 0
+        for bttn in self.bottomButtons:
+            rowVal.append(0 if bttn.background_color == [1, 1, 1, 1] else 1)
+
+            if (count % self.cols == 0):
+                imageMatrixBot[count / self.cols, :] = rowVal
+                rowVal = []
+
+            count += 1
+
+        self.savedImages.append(imageMatrixBot)
+
+
+
     def build(self):
         #self.activePixels.bind(self.pixelValChange)
 
         boxLayout = BoxLayout(orientation='vertical')
 
-        topLayer = BoxLayout( orientation="horizontal", size_hint=(1, .1), padding=4)
+        topLayer = BoxLayout( orientation="horizontal", size_hint=(1, .4), padding=4)
 
         self.currentActiveLBL = Label(text="== HELLO, I AM A GENERAL PATTERN RECOGNIZER ==",size_hint=(1, 1))
         self.clearBttn = Button(text="Clear", size_hint=(0.5, 1), on_press=self.clearBttnFn)
+        self.saveBttn = Button(text="Save", size_hint=(0.2, 1), on_press=self.saveImage)
 
         topLayer.add_widget(self.currentActiveLBL)
         topLayer.add_widget(self.clearBttn )
+        topLayer.add_widget(self.saveBttn)
 
         boxLayout.add_widget(topLayer)
 
         gridLayoutTop = GridLayout(cols=self.cols, padding=10,  size_hint=(1, 2) )
         gridLayoutBottom = GridLayout(cols=self.cols, padding=10, size_hint=(1, 2))
 
-        for i in range(80*2):
+        for i in range(350):
             ntb = Button()
             nbb = Button()
 
@@ -111,6 +151,10 @@ class TestApp(App):
 
         boxLayout.add_widget(gridLayoutTop)
         boxLayout.add_widget(gridLayoutBottom)
+
+        self.saveLayout = BoxLayout(orientation="horizontal", spacing=10, padding=5)
+
+        boxLayout.add_widget(self.saveLayout)
 
         return boxLayout
 

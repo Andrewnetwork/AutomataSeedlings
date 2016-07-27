@@ -4,6 +4,9 @@ def matrixDiff(m1, m2):
     m1Sig = matrixSignature(m1)
     m2Sig = matrixSignature(m2)
 
+    print(m1Sig)
+    print(m2Sig)
+
     diff = 0
     match1 = 0
     match2 = 0
@@ -12,7 +15,7 @@ def matrixDiff(m1, m2):
     for int in intersect:
         match1 +=  sum( sum( [m1Sig == int] ) )
         match2 +=  sum( sum( [m2Sig == int]) )
-        diff += np.abs( sum( sum( [m1Sig == int] ) ) - sum( sum( [m2Sig == int]) )  )
+        diff += sum( sum( [m1Sig == int] ) ) - sum( sum( [m2Sig == int]) )
 
     return [diff , (len(m1Sig) - match1) +  (len(m2Sig) - match2) ]
 
@@ -31,9 +34,10 @@ def matrixSignature( mat ):
 
     for i in topRange:
         for j in innerRange:
-            paths.append(list(dfs_paths(graph, str(i), str(j))))
-
+            pathIter = list(dfs_paths(graph, str(i), str(j)))
+            for p in pathIter:
+                paths.append( len(p) )
         if (len(innerRange) > 0):
             innerRange.pop(0)
 
-    return np.array(sorted([len(x) for x in paths]))
+    return np.array(sorted(paths))

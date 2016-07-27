@@ -27,5 +27,8 @@ The only reason why we can order a list such as <b><i>A</i></b> = [10,3,8,1,7] i
 which produces structure.
 </p>
 
+<h3>Configuration Setup</h3>
+<p>I reccomend you install virtualenv, then when you activate your new environment, pip install my requirements, which is a complete data science setup. It is not a minimum requirements list, in that there are many packages included that are not required to run the programs herein.</p>
+<code>pip install -r requirements.txt</code>
 
 <h1>WORK IN PROGRESS</h1>
