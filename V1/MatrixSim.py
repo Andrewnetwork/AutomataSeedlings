@@ -5,13 +5,16 @@ def matrixSim(m1, m2):
     m2Sig = matrixSignature(m2)
 
     diff = 0
-
+    match1 = 0
+    match2 = 0
     intersect = sorted( list( set(m1Sig).intersection(set(m2Sig)) ) )
 
     for int in intersect:
+        match1 +=  sum( sum( [m1Sig == int] ) )
+        match2 +=  sum( sum( [m2Sig == int]) )
         diff += np.abs( sum( sum( [m1Sig == int] ) ) - sum( sum( [m2Sig == int]) )  )
 
-    return diff
+    return [diff , (len(m1Sig) - match1) +  (len(m2Sig) - match2) ]
 
 
 def matrixSignature( mat ):

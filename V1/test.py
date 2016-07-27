@@ -636,7 +636,28 @@ def test10():
         print(lenOfPaths)
 
 def test11():
-    print( matrixSim(v[0],v[2]) )
+    predictionThreshold = 8
+
+    print("Running...")
+    # 13 bits.
+    while (True):
+        rand = generateRandomConnectedBinaryMatrix(v[0].shape, 13)
+
+        simil = matrixSim(v[0],rand)
+
+        if max(simil) <= predictionThreshold:
+            print("Reference:      ", v[0])
+            print("Generation:     ", np.matrix(rand))
+
+            results_dir = "OutImages/HookTestUltra/pd_"+str(predictionThreshold)+"/"
+            if not os.path.isdir(results_dir):
+                os.makedirs(results_dir)
+
+            saveBinMatrixIMG(rand, results_dir,str(datetime.datetime.now()))
+
+            print("Running...")
+
+    print( matrixSim(v[0],counter[0]) )
 
 
 
