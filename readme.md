@@ -4,12 +4,11 @@
 </center>
 <hr/>
 <h2>Problem Definition</h2>
-<p>
+
 The general problem of <b>one-shot learning</b>:
 
 Given a set of reference structures S, and a new list of structures NS, match
 each new structure in NS to a corresponding reference structure in S based on their nherent similarity.
-
 
 ```python
 for e in NS:
@@ -21,7 +20,7 @@ The reason one-shot learning interests me is due to the notion of finding simila
 which I feel is closer to how humans perform pattern recognition than current methods like Neural Nets. We can be given
 an arbitrary reference alphabet and perform one-shot learning without extensive training over several thousand variants.
 
-</p>
+
 
 
 <h2>Motivation</h2>
