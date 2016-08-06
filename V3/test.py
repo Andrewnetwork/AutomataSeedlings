@@ -148,6 +148,26 @@ np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
+counter[6] = \
+np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0;\
+           0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0;\
+           0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 0;\
+           0 0 0 0 0 0 1 0 0 1 0 0 0 1 1 0;\
+           0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+counter[7] = \
+     np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                0 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0;\
+                0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0;\
+                0 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0;\
+                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+                0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
 def simp():
     outMat, nNodes = MIT( v[0] )
     acn, edgeValMat = ACN_D(outMat, nNodes)
@@ -278,6 +298,125 @@ def test304():
 
     print(simContinuity(listContinuity(long1),listContinuity(long2)))
 
-#test34()
-#test101()
-#test304()
+
+def dfsTest():
+    outMat, nNodes = MIT(v[0])
+    acn, edgeValMat = ACN_D(outMat, nNodes)
+    lst = []
+    print(outMat)
+    print( dfs(acn,str(1),set(),lst) )
+    print(lst)
+
+
+def test933():
+    outMat, nNodes = MIT(v[0])
+    acn, edgeValMat1 = ACN_D(outMat, nNodes)
+
+    print(edgeValMat1)
+
+    outMat, nNodes = MIT(v[1])
+    acn, edgeValMat2 = ACN_D(outMat, nNodes)
+
+    outMat, nNodes = MIT(v[2])
+    acn, edgeValMat3 = ACN_D(outMat, nNodes)
+
+
+
+
+def testBestFromThisPoint():
+    #MIT: Takes in a binary matrix and returns a matrix with a unique id for every position that has a 1.
+    #also returns number of unique nodes.
+    outMat, nNodes = MIT(v[2])
+
+    print(outMat)
+
+    # Matrix dfs. Given:
+    # MIT matrix
+    # number of unique nodes,
+    # and our starting position.
+    # We get:
+    # A DFS walk ( which can be discontinuous )
+    # An ajacency connected nodes dictionary.
+    # A matrix describing the weights between all nodes.
+    walk,acn,edgeVals = matDFS(outMat, nNodes, 9)
+
+    print(walk)
+    #The walk we get back from DFS may be discontinuous. Fix discontinuities in the walk
+    #making the good walk = the longest path.
+    goodWalk = verifyWalk(walk,acn)
+
+    print(goodWalk)
+    # Assign weights to the paths
+    weightedPath = assignPathWeights(goodWalk,edgeVals)
+    print(weightedPath)
+
+    #Getting only the edge weights that characterize the walk.
+    weights = compressList(annotateWeightedPathVect(weightedPath,EDGE_WEIGHTS,LABELD_EDGE_WEIGHTS), 2)
+    print( weights )
+
+    print( listContinuity(weights) )
+
+    print( identityContinuity(weights) )
+
+def testCompareVMat():
+    for mat in v:
+        outMat, nNodes = MIT(mat)
+        walk, acn, edgeVals = matDFS(outMat, nNodes, 1)
+        goodWalk = verifyWalk(walk, acn)
+        weightedPath = assignPathWeights(goodWalk, edgeVals)
+        weights = compressList(annotateWeightedPathVect(weightedPath, EDGE_WEIGHTS, LABELD_EDGE_WEIGHTS), 2)
+
+        print(listContinuity(weights))
+        print(identityContinuity(weights))
+
+
+def longestPathTest():
+
+    for elm in range(7):
+        v.append( counter[elm] )
+
+    for mat in v:
+        outMat, nNodes = MIT(mat)
+        print(outMat)
+        print( longestPath(outMat,nNodes) )
+
+
+def longestPathTest2():
+    outMat, nNodes = MIT(counter[6])
+    print(outMat)
+    print(longestPath(outMat, nNodes))
+
+
+def pathSigTest():
+    #print([17, 16, 15, 14, 12, 10, 6, 4, 1, 2, 3, 5, 7, 8, 9, 11, 13, 18, 19, 20, 21, 24, 25, 29, 28, 27, 23, 22, 26])
+    outMat, nNodes = MIT(counter[6])
+    print(outMat)
+
+    walk, acn, edgeVals = matDFS(outMat, nNodes, 17 )
+
+    print(walk)
+    #for i in range(1,nNodes):
+        #walk, acn, edgeVals = matDFS(outMat, nNodes, i)
+        #print(walk)
+        #subWalks = connectedSubWalks(walk, acn)
+        #lens = [ len(x) for x in subWalks]
+
+        #if(lens[0] >=10):
+            #print(subWalks)
+
+
+def shortTest():
+    outMat, nNodes = MIT(counter[6])
+    print(outMat)
+    drawBinMatrix(outMat)
+
+    #for subList in longestSublists(pathSig(counter[6])):
+        #print(subList,len(subList))
+
+#longestPathTest2()
+
+#testCompareVMat()
+
+#longestPathTest2()
+
+shortTest()
