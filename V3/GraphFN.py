@@ -180,6 +180,107 @@ def dfs_paths(graph, start, goal):
                 stack.append((next, path + [next]))
 
 
+def longestSublists(lsts):
+    longest = []
+    subLists = []
+
+    for lst in lsts:
+        if (len(lst) > len(longest)):
+            longest = lst
+
+    for lst in lsts:
+        if(len(lst) == len(longest) ):
+            subLists.append(lst)
+
+    return subLists
+
+def lcs(S, T):
+    m = len(S)
+    n = len(T)
+    counter = [[0] * (n + 1) for x in range(m + 1)]
+    longest = 0
+    lcs_set = []
+    for i in range(m):
+        for j in range(n):
+            if S[i] == T[j]:
+                c = counter[i][j] + 1
+                counter[i + 1][j + 1] = c
+                if c > longest:
+                    lcs_set = []
+                    longest = c
+                    lcs_set.append(S[i - c + 1:i + 1])
+                elif c == longest:
+                    lcs_set.append(S[i - c + 1:i + 1])
+
+    return lcs_set[0]
+
+def simContinuity(l1, l2):
+
+    return len(lcs(l1, l2)) / float(max(len(l1), len(l2)))
+
+
+
+def pathSig(mat):
+    LABELD_EDGE_WEIGHTS = ["LT", "LM", "LB", "MT", "MB", "RT", "RM", "RB"]
+    EDGE_WEIGHTS = [1, 2, 3, 4, 5, 6, 7, 8]
+
+    outMat, nNodes = MIT(mat)
+    acn, edgeValMat = ACN_D(outMat, nNodes)
+
+    paths = []
+    visited = set()
+
+    for outerNodeID in range(1,len(acn)+1):
+        for nodeID in range(2, len(acn) + 1):
+            if outerNodeID != nodeID and not( (outerNodeID,nodeID)  in visited ):
+                tmp = list(dfs_paths(acn, str(outerNodeID), str(nodeID)))
+                for path in tmp:
+                    annotatedPath = assignPathWeights(path, edgeValMat)
+                    paths.append( compressList(annotateWeightedPathVect(annotatedPath, EDGE_WEIGHTS, LABELD_EDGE_WEIGHTS), 2) )
+
+                visited.add( (outerNodeID,nodeID) )
+                visited.add( (nodeID, outerNodeID) )
+
+    return paths
+
+def getSubListsOfLenOrGreater(superList, length):
+    nl = []
+
+    for lst in superList:
+        if len(lst) >= length:
+            nl.append(lst)
+
+    return nl
+
+def identityContinuity(path):
+    deriv = []
+    identDict = dict()
+    idCounter = 1
+
+    for elm in path:
+        if not (elm in identDict.keys()):
+            identDict[elm] = idCounter
+            idCounter += 1
+
+        deriv.append(identDict[elm])
+
+    return deriv
+
+def listContinuity(path):
+    deriv = []
+    prev = path[0]
+    prevSwitch = 0
+
+    for elm in path:
+        if elm == prev:
+            deriv.append(prevSwitch)
+        else:
+            prevSwitch = int(not prevSwitch)
+            deriv.append(prevSwitch)
+
+        prev = elm
+
+    return deriv
 
 #########################################
 

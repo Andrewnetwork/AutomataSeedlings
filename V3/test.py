@@ -29,7 +29,7 @@ B_named = np.matrix('0 2 4;\
                      1 3 0')
 
 v = [0, 1, 2, 3, 4, 5]
-counter = [0, 1, 2, 3, 4, 5]
+counter = range(0,100)
 
 v[0] = \
         np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
@@ -131,10 +131,20 @@ np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
 counter[4] = \
 np.matrix('0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
            0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
-           0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;\
+           0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0;\
            0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
+
+counter[5] = \
+np.matrix('0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0;\
+           0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;\
            0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0')
 
@@ -198,70 +208,7 @@ def matching(l1,l2):
 
 
 
-def pathSig(mat):
-    LABELD_EDGE_WEIGHTS = ["LT", "LM", "LB", "MT", "MB", "RT", "RM", "RB"]
-    EDGE_WEIGHTS = [1, 2, 3, 4, 5, 6, 7, 8]
 
-    outMat, nNodes = MIT(mat)
-    acn, edgeValMat = ACN_D(outMat, nNodes)
-
-    paths = []
-    visited = set()
-
-    for outerNodeID in range(1,len(acn)+1):
-        for nodeID in range(2, len(acn) + 1):
-            if outerNodeID != nodeID and not( (outerNodeID,nodeID)  in visited ):
-                tmp = list(dfs_paths(acn, str(outerNodeID), str(nodeID)))
-                for path in tmp:
-                    annotatedPath = assignPathWeights(path, edgeValMat)
-                    paths.append( compressList(annotateWeightedPathVect(annotatedPath, EDGE_WEIGHTS, LABELD_EDGE_WEIGHTS), 2) )
-
-                visited.add( (outerNodeID,nodeID) )
-                visited.add( (nodeID, outerNodeID) )
-
-    return paths
-
-def getSubListsOfLenOrGreater(superList, length):
-    nl = []
-
-    for lst in superList:
-        if len(lst) >= length:
-            nl.append(lst)
-
-    return nl
-
-def identityContinuity(path):
-    deriv = []
-    prev = path[0]
-    prevSwitch = 0
-
-    for elm
-    for elm in path:
-        if elm == prev:
-            deriv.append(prevSwitch)
-        else:
-            prevSwitch = int(not prevSwitch)
-            deriv.append(prevSwitch)
-
-        prev = elm
-
-    return deriv
-
-def listContinuity(path):
-    deriv = []
-    prev = path[0]
-    prevSwitch = 0
-
-    for elm in path:
-        if elm == prev:
-            deriv.append(prevSwitch)
-        else:
-            prevSwitch = int(not prevSwitch)
-            deriv.append(prevSwitch)
-
-        prev = elm
-
-    return deriv
 
 def testCMP():
     mat1 = v[0]
@@ -306,14 +253,6 @@ def randGenTest():
                 print(rand)
 
 
-def longestSublist(lsts):
-    longest = []
-
-    for lst in lsts:
-        if( len(lst) > len(longest)):
-            longest = lst
-
-    return longest
 
 def test34():
 
@@ -326,8 +265,19 @@ def test101():
 
     for mat in v:
         sig = pathSig(mat)
-        print( longestSublist(sig) )
+        long = longestSublist(sig)
+        print( identityContinuity(long), listContinuity(identityContinuity(long)) )
 
 
-test34()
-test101()
+def test304():
+    long1 = longestSublist(pathSig(v[0]))
+    long2 = longestSublist(pathSig(counter[5]))
+
+    print(long1,listContinuity(long1))
+    print(long2,listContinuity(long2))
+
+    print(simContinuity(listContinuity(long1),listContinuity(long2)))
+
+#test34()
+#test101()
+#test304()

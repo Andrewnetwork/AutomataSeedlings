@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74340c9-eac3-477e-be96-0fd445fce6aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V3/ExploritoryUI.py" afterPath="$PROJECT_DIR$/V3/ExploritoryUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V3/GraphFN.py" afterPath="$PROJECT_DIR$/V3/GraphFN.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V3/test.py" afterPath="$PROJECT_DIR$/V3/test.py" />
     </list>
     <ignored path="Research.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,11 +18,12 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1470454024188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V3" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1470456203305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V3" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI.coverage" NAME="Unittests in ExploritoryUI Coverage Results" MODIFIED="1470451534583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw.coverage" NAME="Unittests in BitDraw Coverage Results" MODIFIED="1469609711141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BitDraw" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI__1_.coverage" NAME="Unittests in ExploritoryUI (1) Coverage Results" MODIFIED="1470144799680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V2" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1470267463024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V2" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI__2_.coverage" NAME="Unittests in ExploritoryUI (2) Coverage Results" MODIFIED="1470457403482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V3" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$matrixDiff.coverage" NAME="matrixDiff Coverage Results" MODIFIED="1469625323350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw__1_.coverage" NAME="Unittests in BitDraw (1) Coverage Results" MODIFIED="1469809126655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BitDraw" />
   </component>
@@ -36,18 +39,32 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V3/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+              <folding>
+                <element signature="e#309#330#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExploritoryUI.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/V3/ExploritoryUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="150">
+              <first_editor relative-caret-position="300">
                 <caret line="20" column="120" selection-start-line="20" selection-start-column="120" selection-end-line="20" selection-end-column="120" />
                 <folding>
                   <marker date="1470454795000" expanded="true" signature="413:467" placeholder="..." />
@@ -87,8 +104,8 @@
       <file leaf-file-name="GraphFN.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V3/GraphFN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="273" column="4" selection-start-line="273" selection-start-column="4" selection-end-line="273" selection-end-column="4" />
+            <state relative-caret-position="-194">
+              <caret line="182" column="18" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="18" />
               <folding>
                 <element signature="e#311#329#0" expanded="true" />
               </folding>
@@ -129,12 +146,13 @@
         <option value="$PROJECT_DIR$/V2/GraphMaker.py" />
         <option value="$PROJECT_DIR$/V2/test.py" />
         <option value="$PROJECT_DIR$/V2/GraphTraverse.py" />
-        <option value="$PROJECT_DIR$/V3/GraphFN.py" />
         <option value="$PROJECT_DIR$/Notes/homelessNotes.md" />
         <option value="$PROJECT_DIR$/Notes/readme.md" />
         <option value="$PROJECT_DIR$/Notes/writeup.md" />
-        <option value="$PROJECT_DIR$/V3/test.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/V3/test.py" />
+        <option value="$PROJECT_DIR$/V3/GraphFN.py" />
+        <option value="$PROJECT_DIR$/V3/ExploritoryUI.py" />
       </list>
     </option>
   </component>
@@ -201,6 +219,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="V3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomataSeedlings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomataSeedlings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="V2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -249,37 +281,15 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/V2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/V3" />
+      <recent name="$PROJECT_DIR$/V2" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in ExploritoryUI">
-    <configuration default="false" name="Unittests in BitDraw (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BitDraw" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Research" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BitDraw/BitDraw.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in ExploritoryUI (2)">
     <configuration default="false" name="Unittests in ExploritoryUI" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -360,6 +370,29 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/V3/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in ExploritoryUI (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/V3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Research" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/V3/ExploritoryUI.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -571,19 +604,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (2)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in BitDraw (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in ExploritoryUI (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -607,21 +640,6 @@
     <history-entry file="Unittests_in_ExploritoryUI - 2016.08.05 at 22h 53m 19s.xml">
       <configuration name="Unittests in ExploritoryUI" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 06h 51m 11s.xml">
-      <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 06h 51m 56s.xml">
-      <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 06h 53m 39s.xml">
-      <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 07h 01m 03s.xml">
-      <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 07h 02m 50s.xml">
-      <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 07h 08m 45s.xml">
       <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
     </history-entry>
@@ -633,6 +651,21 @@
     </history-entry>
     <history-entry file="Unittests_in_ExploritoryUI_(1) - 2016.08.02 at 09h 33m 19s.xml">
       <configuration name="Unittests in ExploritoryUI (1)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_ExploritoryUI_(2) - 2016.08.06 at 00h 14m 25s.xml">
+      <configuration name="Unittests in ExploritoryUI (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_ExploritoryUI_(2) - 2016.08.06 at 00h 16m 01s.xml">
+      <configuration name="Unittests in ExploritoryUI (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_ExploritoryUI_(2) - 2016.08.06 at 00h 16m 06s.xml">
+      <configuration name="Unittests in ExploritoryUI (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_ExploritoryUI_(2) - 2016.08.06 at 00h 19m 18s.xml">
+      <configuration name="Unittests in ExploritoryUI (2)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_ExploritoryUI_(2) - 2016.08.06 at 00h 19m 42s.xml">
+      <configuration name="Unittests in ExploritoryUI (2)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -654,7 +687,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.49284694" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3313253" sideWeight="0.4828326" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3313253" sideWeight="0.4828326" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17381974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.48855507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23319027" sideWeight="0.13873874" order="2" side_tool="true" content_ui="tabs" />
@@ -706,16 +739,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/V1/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#309#330#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -994,20 +1017,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/writeup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding>
+              <marker date="1470453954000" expanded="true" signature="384:438" placeholder="..." />
+              <marker date="1470453954000" expanded="true" signature="384:802" placeholder="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/V1/GraphFN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="317" column="21" selection-start-line="317" selection-start-column="21" selection-end-line="317" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/V3/GraphFN.py">
+    <entry file="file://$PROJECT_DIR$/V3/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="273" column="4" selection-start-line="273" selection-start-column="4" selection-end-line="273" selection-end-column="4" />
+        <state relative-caret-position="392">
+          <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
           <folding>
-            <element signature="e#311#329#0" expanded="true" />
+            <element signature="e#309#330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,25 +1060,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/writeup.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-            <folding>
-              <marker date="1470453954000" expanded="true" signature="384:438" placeholder="..." />
-              <marker date="1470453954000" expanded="true" signature="384:802" placeholder="..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/V3/test.py">
+    <entry file="file://$PROJECT_DIR$/V3/GraphFN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="-194">
+          <caret line="182" column="18" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="18" />
+          <folding>
+            <element signature="e#311#329#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,13 +1084,23 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="150">
+          <first_editor relative-caret-position="300">
             <caret line="20" column="120" selection-start-line="20" selection-start-column="120" selection-end-line="20" selection-end-column="120" />
             <folding>
               <marker date="1470454795000" expanded="true" signature="413:467" placeholder="..." />
             </folding>
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/V3/ExploritoryUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,7 +10,7 @@ from kivy.uix.scrollview import ScrollView
 
 import numpy as np
 from GraphFN import *
-from matrixDiff import *
+import pandas as pd
 
 
 Config.set('graphics', 'width', '800')
@@ -44,7 +44,7 @@ class TestApp(App):
 
             # Compute matrix diff for saved images.
             for idx,img in enumerate(self.savedImages):
-                matrixD = matrixDiff( self.topImageBuffer,img )
+                matrixD = self.matrixDiff( self.topImageBuffer,img )
                 self.savedImagesBttns[idx].text =  "[ "+str(matrixD[0])+" | "+str(matrixD[1])+" ]"
         except:
             self.currentActiveLBL.text = "NEED INPUT"
@@ -79,7 +79,8 @@ class TestApp(App):
 
         self.topImageBuffer = imageMatrixTop
 
-        return matrixDiff(imageMatrixTop, imageMatrixBot)
+        ## EDIT HERE
+        return self.matrixDiff(imageMatrixTop, imageMatrixBot)
 
     def clearBttnFn(self, instance):
         for bttn in self.topBttns:
@@ -91,6 +92,24 @@ class TestApp(App):
         self.activePixels = 0
 
         self.currentActiveLBL.text = "NEED INPUT"
+
+    def matrixDiff(self, mt, mb):
+        long1 = longestSublists(pathSig(mt))
+        long2 = longestSublists(pathSig(mb))
+
+        largestCont = 0
+
+        for elm1 in long1:
+            for elm2 in long2:
+                cont1 = listContinuity(elm1)
+                cont2 = listContinuity(elm2)
+                sim = simContinuity(cont1, cont2)
+
+                if(sim > largestCont):
+                    largestCont = sim
+                    print(cont1,cont2)
+
+        return (largestCont,largestCont)
 
     def saveImage(self, instance):
         nb = Button(width=100)
