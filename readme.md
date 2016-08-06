@@ -7,7 +7,7 @@
 <p>
 The general problem of <b>one-shot learning</b>:
 
->Given a set of reference structures S, and a new list of structures NS, match
+Given a set of reference structures S, and a new list of structures NS, match
 each new structure in NS to a corresponding reference structure in S based on their nherent similarity.
 
 
