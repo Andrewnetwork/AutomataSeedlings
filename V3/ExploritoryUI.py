@@ -9,8 +9,8 @@ from kivy.properties import NumericProperty
 from kivy.uix.scrollview import ScrollView
 
 import numpy as np
-from GraphMaker import *
-import pandas as pd
+from GraphFN import *
+from matrixDiff import *
 
 
 Config.set('graphics', 'width', '800')
@@ -44,7 +44,7 @@ class TestApp(App):
 
             # Compute matrix diff for saved images.
             for idx,img in enumerate(self.savedImages):
-                matrixD = self.matrixDiff( self.topImageBuffer,img )
+                matrixD = matrixDiff( self.topImageBuffer,img )
                 self.savedImagesBttns[idx].text =  "[ "+str(matrixD[0])+" | "+str(matrixD[1])+" ]"
         except:
             self.currentActiveLBL.text = "NEED INPUT"
@@ -79,8 +79,7 @@ class TestApp(App):
 
         self.topImageBuffer = imageMatrixTop
 
-        ## EDIT HERE
-        return self.matrixDiff(imageMatrixTop, imageMatrixBot)
+        return matrixDiff(imageMatrixTop, imageMatrixBot)
 
     def clearBttnFn(self, instance):
         for bttn in self.topBttns:
@@ -92,44 +91,6 @@ class TestApp(App):
         self.activePixels = 0
 
         self.currentActiveLBL.text = "NEED INPUT"
-
-    def matrixDiff(self, mt, mb):
-        pmT =  ETPM( mt  )
-        pmB =  ETPM( mb )
-
-        vsd = vectorSimDiff(sorted(pmT[1].flatten()), sorted(pmB[1].flatten()))
-
-        diff = pmT[1] - pmB[1]
-
-        df1 = pd.DataFrame(pmT[1], index=pmT[0],columns=pmT[0])
-        df2 = pd.DataFrame(pmB[1], index=pmB[0],columns=pmB[0])
-
-        diffPd = pd.DataFrame(diff, index=pmB[0],columns=pmB[0])
-
-        print("=====================================")
-        print(df1)
-        print(df2)
-        print(diffPd)
-
-        diffSum = 0
-        for elm in diff.flatten():
-            if(not np.isnan(elm)):
-                diffSum +=  np.abs(elm)
-
-        pmTSum = 0
-        for elm in pmT[1].flatten():
-            if (not np.isnan(elm)):
-                pmTSum += np.abs(elm)
-
-
-
-
-
-        print(pmT[1].diagonal())
-        print(pmB[1].diagonal())
-
-
-        return ( np.abs( pmT[1].diagonal() - pmB[1].diagonal() ).sum() , diffSum/pmTSum )
 
     def saveImage(self, instance):
         nb = Button(width=100)
