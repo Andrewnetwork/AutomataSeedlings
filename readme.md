@@ -8,7 +8,7 @@
 The general problem of <b>one-shot learning</b>:
 
 Given a set of reference structures S, and a new list of structures NS, match
-each new structure in NS to a corresponding reference structure in S based on their nherent similarity.
+each new structure in NS to a corresponding reference structure in S based on their inherent similarity.
 
 ```python
 for e in NS:
@@ -16,11 +16,9 @@ for e in NS:
         #Find the largest ( e sim s )
 ```
 
-The reason one-shot learning interests me is due to the notion of finding similarity based on inherent structure --
+One-shot learning interests me due to the notion of finding similarity based on inherent structure --
 which I feel is closer to how humans perform pattern recognition than current methods like Neural Nets. We can be given
 an arbitrary reference alphabet and perform one-shot learning without extensive training over several thousand variants.
-
-
 
 
 <h2>Motivation</h2>
