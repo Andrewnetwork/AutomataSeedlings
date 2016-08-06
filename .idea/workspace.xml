@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74340c9-eac3-477e-be96-0fd445fce6aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V2/ExploritoryUI.py" afterPath="$PROJECT_DIR$/V2/ExploritoryUI.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V2/GraphMaker.py" afterPath="$PROJECT_DIR$/V2/GraphMaker.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V2/test.py" afterPath="$PROJECT_DIR$/V2/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Notes/writeup.md" afterPath="$PROJECT_DIR$/Notes/writeup.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V3/test.py" afterPath="$PROJECT_DIR$/V3/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="Research.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1470452692623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V3" />
+    <SUITE FILE_PATH="coverage/AutomataSeedlings$test.coverage" NAME="test Coverage Results" MODIFIED="1470454024188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V3" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI.coverage" NAME="Unittests in ExploritoryUI Coverage Results" MODIFIED="1470451534583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V1" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_BitDraw.coverage" NAME="Unittests in BitDraw Coverage Results" MODIFIED="1469609711141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BitDraw" />
     <SUITE FILE_PATH="coverage/AutomataSeedlings$Unittests_in_ExploritoryUI__1_.coverage" NAME="Unittests in ExploritoryUI (1) Coverage Results" MODIFIED="1470144799680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/V2" />
@@ -39,22 +38,22 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/V3/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="writeup.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="writeup.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes/writeup.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="110" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
+              <first_editor relative-caret-position="225">
+                <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                 <folding>
-                  <marker date="1470453707000" expanded="true" signature="384:438" placeholder="..." />
-                  <marker date="1470453707000" expanded="true" signature="384:803" placeholder="..." />
+                  <marker date="1470453954000" expanded="true" signature="384:438" placeholder="..." />
+                  <marker date="1470453954000" expanded="true" signature="384:802" placeholder="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -62,13 +61,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
-                <folding />
+              <first_editor relative-caret-position="300">
+                <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+                <folding>
+                  <marker date="1470454320000" expanded="true" signature="423:477" placeholder="..." />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -141,17 +142,17 @@
         <option value="$PROJECT_DIR$/V1/GraphFN.py" />
         <option value="$PROJECT_DIR$/V1/ExploritoryUI.py" />
         <option value="$PROJECT_DIR$/V1/matrixDiff.py" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/V2/Edge.py" />
         <option value="$PROJECT_DIR$/V2/ExploritoryUI.py" />
         <option value="$PROJECT_DIR$/V2/GraphMaker.py" />
         <option value="$PROJECT_DIR$/V2/test.py" />
         <option value="$PROJECT_DIR$/V2/GraphTraverse.py" />
         <option value="$PROJECT_DIR$/V3/GraphFN.py" />
-        <option value="$PROJECT_DIR$/V3/test.py" />
         <option value="$PROJECT_DIR$/Notes/homelessNotes.md" />
         <option value="$PROJECT_DIR$/Notes/readme.md" />
         <option value="$PROJECT_DIR$/Notes/writeup.md" />
+        <option value="$PROJECT_DIR$/V3/test.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -738,7 +739,9 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="240">
             <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-            <folding />
+            <folding>
+              <marker date="1470454320000" expanded="true" signature="423:477" placeholder="..." />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -1049,10 +1052,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Notes/writeup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding>
+              <marker date="1470453954000" expanded="true" signature="384:438" placeholder="..." />
+              <marker date="1470453954000" expanded="true" signature="384:802" placeholder="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/V3/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="237" column="11" selection-start-line="237" selection-start-column="11" selection-end-line="237" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1060,22 +1077,10 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/writeup.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="110" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
+          <first_editor relative-caret-position="300">
+            <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
             <folding>
-              <marker date="1470453707000" expanded="true" signature="384:438" placeholder="..." />
-              <marker date="1470453707000" expanded="true" signature="384:803" placeholder="..." />
+              <marker date="1470454320000" expanded="true" signature="423:477" placeholder="..." />
             </folding>
           </first_editor>
           <second_editor />

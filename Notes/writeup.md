@@ -13,9 +13,8 @@ for e in NS:
         #Find the largest ( e sim s )
 ```
 
-The reason one-shot learning interests me is due to the notion of finding inherent structure -- which I feel is closer
-to how humans perform pattern recognition than current methods like Neural Nets. We can be given a reference alphabet
-and
+The reason one-shot learning interests me is due to the notion of finding similarity based on inherent structure --
+which I feel is closer to how humans perform pattern recognition than current methods like Neural Nets. We can be given
+an arbitrary reference alphabet and perform one-shot learning without extensive training over several thousand variants.
 
 
-We want to do one-shot learning. The only way to do one-shot learning is to understand the inherent structure of the

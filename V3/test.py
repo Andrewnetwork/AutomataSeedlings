@@ -230,7 +230,22 @@ def getSubListsOfLenOrGreater(superList, length):
 
     return nl
 
-def identityContinuity():
+def identityContinuity(path):
+    deriv = []
+    prev = path[0]
+    prevSwitch = 0
+
+    for elm
+    for elm in path:
+        if elm == prev:
+            deriv.append(prevSwitch)
+        else:
+            prevSwitch = int(not prevSwitch)
+            deriv.append(prevSwitch)
+
+        prev = elm
+
+    return deriv
 
 def listContinuity(path):
     deriv = []
@@ -313,6 +328,6 @@ def test101():
         sig = pathSig(mat)
         print( longestSublist(sig) )
 
-#test101()
-test34()
 
+test34()
+test101()
